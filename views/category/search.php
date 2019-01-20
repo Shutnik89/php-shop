@@ -1,3 +1,9 @@
+<?
+use yii\helpers\Url;
+
+?>
+
+
 <div class="container">
 
     <h2>Результаты посика по запросу <?=$search?></h2>
@@ -16,7 +22,8 @@
                     <div class="product-price">Цена:<?=$good['price']?></div>
                     <div class="product-buttons">
                         <button type="button" class="product-button__add btn btn-success">Заказать</button>
-                        <button type="button" class="product-button__more btn btn-primary">Подробнее</button>
+                        <a href="<?=Url::to(['good/index', 'name'=>$good['link_name']])?>" type="button" class="product-button__add btn btn-success">Подробнее</a>
+
                     </div>
                 </div>
             </div>

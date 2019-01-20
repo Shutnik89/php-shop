@@ -32,7 +32,7 @@ AppAsset::register($this);
             <div class="header">
                 <a href="/">На главную</a>
                 <a href="#">Вход в админку</a>
-                <a href="#">Корзина</a>
+                <a href="#" onclick="openCart(event)">Корзина</a>
                 <form action="<?=Url::to(['category/search'])?>" method="get">
                 <input type="text" style="padding: 5px" placeholder="Поиск..." name="search">
 
@@ -51,6 +51,16 @@ AppAsset::register($this);
         </div>
     </footer>
 </section>
+
+<!-- Extra large modal -->
+<div id="cart" class="modal fade bd-example-modal-xl"  tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            Закзать
+        </div>
+    </div>
+</div>
+
 <?php $this->endBody() ?>
 </body>
 </html>
